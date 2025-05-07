@@ -18,7 +18,9 @@ import {
   Shield,
   Award,
 } from "lucide-react";
+
 import LegacyLanding from "@/component/LegacyLanding";
+import LottiePlayer from "@/component/animations/lottie-animation";
 export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("individuals");
@@ -347,16 +349,9 @@ export default function LandingPage() {
             </div>
 
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-              <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-                <div className="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  <video
-                    className="w-full"
-                    src="/habitprogress.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
+              <div className="relative mx-auto w-[400px] h-[300px rounded-lg  lg:max-w-md">
+                <div className="relative block w-[300px] h-[500px bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  <LottiePlayer />
                   <div className="absolute inset-0 w-full h-full flex items-center justify-center"></div>
                 </div>
               </div>
